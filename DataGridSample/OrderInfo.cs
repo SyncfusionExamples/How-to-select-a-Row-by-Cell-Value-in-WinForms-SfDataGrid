@@ -9,84 +9,57 @@ using System.Runtime.CompilerServices;
 
 namespace DataGridSample
 {
-  
+
     public class OrderInfo : INotifyPropertyChanged
     {
-        private string orderID;
-        private string customerId;
-        private string country;
-        private string customerName;
-        private string shippingCity;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
+        string orderID;
+        string customerId;
+        string country;
+        string customerName;
+        string shipCity;
         public string OrderID
         {
-            get => orderID;
+            get { return orderID; }
             set
             {
-                if (orderID != value)
-                {
-                    orderID = value;
-                    OnPropertyChanged();
-                }
+                orderID = value;
+                OnPropertyChanged("OrderID");
             }
         }
-
         public string CustomerID
         {
-            get => customerId;
+            get { return customerId; }
             set
             {
-                if (customerId != value)
-                {
-                    customerId = value;
-                    OnPropertyChanged();
-                }
+                customerId = value;
+                OnPropertyChanged("CustomerID");
             }
         }
-
         public string CustomerName
         {
-            get => customerName;
+            get { return customerName; }
             set
             {
-                if (customerName != value)
-                {
-                    customerName = value;
-                    OnPropertyChanged();
-                }
+                customerName = value;
+                OnPropertyChanged("CustomerName");
             }
         }
-
         public string Country
         {
-            get => country;
+            get { return country; }
             set
             {
-                if (country != value)
-                {
-                    country = value;
-                    OnPropertyChanged();
-                }
+                country = value;
+                OnPropertyChanged("Country");
             }
         }
-
         public string ShipCity
         {
-            get => shippingCity;
+            get { return shipCity; }
             set
             {
-                if (shippingCity != value)
-                {
-                    shippingCity = value;
-                    OnPropertyChanged();
-                }
+                shipCity = value;
+                OnPropertyChanged("ShipCity");
             }
         }
 
@@ -98,6 +71,17 @@ namespace DataGridSample
             this.CustomerID = customerId;
             this.ShipCity = shipCity;
         }
-    }
 
+        public OrderInfo()
+        {
+
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged(string PropertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+        }
+    }
 }

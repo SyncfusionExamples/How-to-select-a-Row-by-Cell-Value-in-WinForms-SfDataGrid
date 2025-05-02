@@ -55,7 +55,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(216, 27);
             textBox1.TabIndex = 1;
-          
             // 
             // button1
             // 
@@ -81,11 +80,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
-
-
-
         #endregion
-
         private Syncfusion.WinForms.DataGrid.SfDataGrid sfDataGrid1;
         private TextBox textBox1;
         private Button button1;
