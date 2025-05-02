@@ -20,12 +20,14 @@ namespace DataGridSample
 
         private void SelectRow(object sender, EventArgs e)
         {
+            // Retrive the data based on entered cell value.
             var rowData = orderInfoCollection.Orders.FirstOrDefault(data => data.OrderID.ToString().ToLower() == textBox1.Text.ToLower() ||
                                                    data.CustomerID.ToString().ToLower() == textBox1.Text.ToLower() ||
                                                    data.CustomerName.ToString().ToLower() == textBox1.Text.ToLower() ||
                                                    data.ShipCity.ToString().ToLower() == textBox1.Text.ToLower() ||
                                                    data.Country.ToString().ToLower() == textBox1.Text.ToLower());
 
+            // Select the retrived data
             this.sfDataGrid1.SelectedItem = rowData;
         }
     }
