@@ -4,15 +4,18 @@ In a WinForms [DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagri
  
  ```csharp
   private void SelectRow(object sender, EventArgs e)
-   {
-      var rowData = orderInfoCollection.Orders.FirstOrDefault(data => data.OrderID.ToString().ToLower() == textBox1.Text.ToLower() ||
-                                             data.CustomerID.ToString().ToLower() == textBox1.Text.ToLower() ||
-                                             data.CustomerName.ToString().ToLower() == textBox1.Text.ToLower() ||
-                                             data.ShipCity.ToString().ToLower() == textBox1.Text.ToLower() ||
-                                             data.Country.ToString().ToLower() == textBox1.Text.ToLower());
+  {
+     // Retrive the data based on entered cell value.
+     var rowData = orderInfoCollection.Orders.FirstOrDefault(data => 
+                   data.OrderID.ToString().ToLower() == textBox1.Text.ToLower() ||
+                   data.CustomerID.ToString().ToLower() == textBox1.Text.ToLower() ||
+                   data.CustomerName.ToString().ToLower() == textBox1.Text.ToLower() ||
+                   data.ShipCity.ToString().ToLower() == textBox1.Text.ToLower() ||
+                   data.Country.ToString().ToLower() == textBox1.Text.ToLower());
 
-      this.sfDataGrid1.SelectedItem = rowData;
-   }
+     // Select the retrived data
+     this.sfDataGrid1.SelectedItem = rowData;
+ }
 
  ```
 ![Select a Row by Cell Value](SelectRowByCellValue.gif)
