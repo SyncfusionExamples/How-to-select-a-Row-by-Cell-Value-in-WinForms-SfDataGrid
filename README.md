@@ -17,6 +17,6 @@ In a [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagri
      this.sfDataGrid1.SelectedItem = rowData;
  }
  ```
-![SelectRowByCellValue.gif](https://support.syncfusion.com/kb/agent/attachment/article/18660/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM5OTU2Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.f86Wx927Rdbog61whT624ZNQ-m9vmnjEfEeIUQIDmNA)
+![Select a row by cellvalue](SelectRowByCellValue.gif)
 
 Take a moment to peruse the [WinForms DataGrid - Selection](https://help.syncfusion.com/windowsforms/datagrid/selection) documentation, to learn more about DataGrid Selections with examples.
